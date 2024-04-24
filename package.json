@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "up":"knex migrate up",
+    "down":"knex migrate down",
+    "latest": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "resetdb":"npm run rollback && run latest && npm run seed",
     "start": "node index.js",
     "server": "nodemon index.js",
     "ketchup": "git fetch && git reset --hard origin/lecture"
